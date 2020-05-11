@@ -6,18 +6,18 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_lock"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_lock"
+        android:roundIcon="@mipmap/ic_lock_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Register"></activity>
-        <activity android:name=".LogIn" >
+        <activity android:name=".Register" android:label="RESGISTER" ></activity>
+        <activity android:name=".LogIn" android:label="LOG_IN" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:label="MAIN ACTIVITY">
         </activity>
     </application>
 

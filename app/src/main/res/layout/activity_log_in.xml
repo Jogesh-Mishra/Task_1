@@ -38,17 +38,24 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="279dp"
-            android:layout_height="127dp"
+            android:layout_width="272dp"
+            android:layout_height="114dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             app:srcCompat="@drawable/firebase" />
 
-        <ImageView
-            android:id="@+id/imageView5"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="76dp"
-            app:srcCompat="@drawable/login2" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/head"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="LOG_IN"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etMail_Login"
@@ -62,7 +69,9 @@
             android:hint="Please Enter Your E-mail"
             android:inputType="textEmailAddress"
             android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="normal" />
 
         <EditText
             android:id="@+id/etPass_Login"
@@ -76,7 +85,9 @@
             android:hint="Please Enter Your Password"
             android:inputType="textPassword"
             android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="normal" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -120,7 +131,7 @@
             android:clickable="true"
             android:gravity="center_horizontal"
             android:text="Forgot Password ? Click Here !"
-            android:textColor="#FFFFFF"
+            android:textColor="#0B0A0A"
             android:textSize="18sp"
             android:textStyle="bold" />
 

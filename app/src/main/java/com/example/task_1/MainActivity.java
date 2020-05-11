@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvLoad;
 
 
-    Button btnSignout;
-    TextView tvMessage,tvCall,tvBrowser,tvFacebook,tvInstagram;
+    Button btnSignout,btnMessage,btnCall,btnWeb,btnFacebook,btnInstagram;
+    TextView tvWelcome;
 
     FirebaseAuth fauth ;
     FirebaseUser fireUser ;
@@ -40,15 +40,17 @@ public class MainActivity extends AppCompatActivity {
         tvLoad = findViewById(R.id.tvLoad);
 
         btnSignout=findViewById(R.id.btnSignout);
-        tvMessage=findViewById(R.id.tvMessage);
-        tvCall=findViewById(R.id.tvCall);
-        tvBrowser=findViewById(R.id.tvBrowser);
-        tvFacebook=findViewById(R.id.tvFacebook);
-        tvInstagram=findViewById(R.id.tvInstagram);
+        btnMessage=findViewById(R.id.btnMessage);
+        btnCall=findViewById(R.id.btnCall);
+        btnWeb=findViewById(R.id.btnWeb);
+        btnFacebook=findViewById(R.id.btnFacebook);
+        btnInstagram=findViewById(R.id.btnInstagram);
+        tvWelcome=findViewById(R.id.tvWelcome);
 
         fauth = FirebaseAuth.getInstance();
         fireUser = fauth.getCurrentUser();
 
+        tvWelcome.setText("Welcome "+fireUser.getEmail());
 
         btnSignout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tvCall.setOnClickListener(new View.OnClickListener() {
+        btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String uri = "tel:"+"7008683249";
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tvMessage.setOnClickListener(new View.OnClickListener() {
+        btnMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent sendIntent = new Intent(Intent.ACTION_VIEW);
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tvBrowser.setOnClickListener(new View.OnClickListener() {
+        btnWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String uri = "https://"+"www.spectrumcet.com";
@@ -94,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tvFacebook.setOnClickListener(new View.OnClickListener() {
+        btnFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent fb = new Intent(Intent.ACTION_VIEW);
@@ -104,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tvInstagram.setOnClickListener(new View.OnClickListener() {
+        btnInstagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent insta = new Intent(Intent.ACTION_VIEW);

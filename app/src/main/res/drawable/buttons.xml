@@ -5,8 +5,9 @@
             <corners android:bottomLeftRadius="20dp" android:topRightRadius="20dp">
 
             </corners>
-            <gradient android:startColor="#5ee7df"
-                android:endColor="#b490ca"
+            <stroke android:color="@android:color/background_dark"></stroke>
+            <gradient android:startColor="#d7d2cc"
+                android:endColor="#304352"
                 android:type="linear">
 
             </gradient>
